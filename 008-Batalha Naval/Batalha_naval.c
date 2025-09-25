@@ -32,6 +32,9 @@ int main() {
         tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;
     }
 
+    printf("\nTabuleiro de Batalha Naval:\n");
+    printf("\n");
+
     // Exibe cabeçalho com letras das colunas
     printf("   ");
     for (char letra = 'A'; letra < 'A' + TAMANHO_TABULEIRO; letra++) {
@@ -48,5 +51,19 @@ int main() {
         printf("\n");
     }
 
+     // Exibe coordenadas das partes dos navios
+    printf("\nCoordenadas do Navio Horizontal:\n");
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        char coluna_letra = 'A' + coluna_horizontal + i;
+        int linha_numero = linha_horizontal + 1;
+        printf(" - %c%d\n", coluna_letra, linha_numero);
+    }
+
+    printf("\nCoordenadas do Navio Vertical:\n");
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        char coluna_letra = 'A' + coluna_vertical;
+        int linha_numero = linha_vertical + i + 1;
+        printf(" - %c%d\n", coluna_letra, linha_numero);
+    }
     return 0;
 }
